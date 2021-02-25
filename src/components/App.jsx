@@ -45,6 +45,8 @@ function App() {
         }); 
         break;
       
+      default:
+        break;
     }
     
    
@@ -72,7 +74,7 @@ function App() {
   function upgradeDoing(id)
   {
     const note = doingNotes.filter((noteItem, index) => {
-      return index == id;
+      return index === id;
     });
 
     setDone(() => {
@@ -102,9 +104,9 @@ function App() {
       <CreateArea 
         onAdd={addNote}
       />
-      <div class="row">
+      <div class="row" style={{marginTop: "40px"}}>
       <div class="column" style={{backgroundColor: "#aaa"}}>
-        <h2>ToDo</h2>
+        <h2>To Do</h2>
         <p>Start doing your tasks...</p>
 
         {notes.map((noteItem, index) => {
